@@ -1,0 +1,100 @@
+# =========================
+
+# Python
+
+# =========================
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+
+venv/
+.venv/
+env/
+ENV/
+
+# =========================
+
+# Jupyter / Notebooks
+
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+
+# Data files (optional)
+
+# =========================
+
+data/*.npy
+data/*.csv
+data/*.zip
+data/*.txt
+
+# If you WANT to keep dataset, comment above lines
+
+# =========================
+
+# Model files (large binaries)
+
+# =========================
+
+model/*.h5
+model/*.tflite
+
+# Keep plots if needed
+
+# model/*.png
+
+# =========================
+
+# Logs
+
+# =========================
+
+*.log
+logs/
+
+# =========================
+
+# OS files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# VS Code
+
+# =========================
+
+.vscode/
+
+# =========================
+
+# Wokwi (keep these)
+
+# =========================
+
+# DO NOT IGNORE:
+
+# wokwi/diagram.json
+
+# wokwi/sketch.ino
+
+# wokwi/libraries.txt
+
+# =========================
+
+# Misc
+
+# =========================
+
+*.tmp
+*.bak
+*.swp

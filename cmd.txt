@@ -1,0 +1,3 @@
+ python data/preprocess.py
+ python model/train_lstm.py
+ python model/optimize_model.py
