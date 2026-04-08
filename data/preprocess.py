@@ -23,7 +23,7 @@ SELECTED_SENSORS = [
 if not os.path.exists(DATA_PATH):
     raise FileNotFoundError("❌ Put train_FD001.txt inside data/ folder")
 
-print("📂 Loading dataset...")
+print("Loading dataset...")
 
 df = pd.read_csv(DATA_PATH, sep=r"\s+", header=None)
 
@@ -34,13 +34,13 @@ columns = ['unit', 'cycle'] + \
 
 df.columns = columns
 
-print("📊 Dataset shape:", df.shape)
+print("Dataset shape:", df.shape)
 
 # =========================
 # 2. COMPUTE RUL
 # =========================
 
-print("🧠 Computing RUL...")
+print(" Computing RUL...")
 
 max_cycles = df.groupby('unit')['cycle'].max()
 
@@ -51,7 +51,7 @@ df['RUL'] = df.apply(
 
 df['RUL'] = df['RUL'].clip(upper=125)
 
-print("✅ RUL calculated")
+print(" RUL calculated")
 
 # =========================
 # 3. SELECT FEATURES
@@ -68,13 +68,13 @@ print("📏 Normalizing...")
 scaler = MinMaxScaler()
 df[SELECTED_SENSORS] = scaler.fit_transform(df[SELECTED_SENSORS])
 
-print("✅ Normalization done")
+print(" Normalization done")
 
 # =========================
 # 5. CREATE SEQUENCES
 # =========================
 
-print("🔄 Creating sequences...")
+print("Creating sequences...")
 
 def create_sequences(data, seq_len):
     X, y = [], []
